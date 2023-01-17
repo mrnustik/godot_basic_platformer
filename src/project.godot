@@ -26,3 +26,7 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="Platformer"
+
+[physics]
+
+2d/default_gravity=400.0
