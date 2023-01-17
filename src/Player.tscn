@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1erldlanoujw"]
+[gd_scene load_steps=7 format=3 uid="uid://b1erldlanoujw"]
 
 [ext_resource type="Texture2D" uid="uid://dkmgv6rcck1q1" path="res://Assets/characters.png" id="1_6hi6p"]
 
@@ -6,11 +6,24 @@
 atlas = ExtResource("1_6hi6p")
 region = Rect2(48, 0, 24, 24)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d24hw"]
+atlas = ExtResource("1_6hi6p")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq5aq"]
+atlas = ExtResource("1_6hi6p")
+region = Rect2(72, 0, 24, 24)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_qmmme"]
 animations = [{
 "frames": [SubResource("AtlasTexture_7vbfg")],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [SubResource("AtlasTexture_d24hw"), SubResource("AtlasTexture_pq5aq")],
+"loop": true,
+"name": &"Run",
 "speed": 5.0
 }]
 
@@ -21,7 +34,8 @@ size = Vector2(14, 20)
 
 [node name="AnimatedSprite2d" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_qmmme")
-animation = &"Idle"
+animation = &"Run"
+playing = true
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
