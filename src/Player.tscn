@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1erldlanoujw"]
+[gd_scene load_steps=8 format=3 uid="uid://b1erldlanoujw"]
 
 [ext_resource type="Texture2D" uid="uid://dkmgv6rcck1q1" path="res://Assets/characters.png" id="1_6hi6p"]
+[ext_resource type="Script" path="res://Player.gd" id="1_wr43o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7vbfg"]
 atlas = ExtResource("1_6hi6p")
@@ -31,10 +32,11 @@ animations = [{
 size = Vector2(14, 20)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_wr43o")
 
 [node name="AnimatedSprite2d" type="AnimatedSprite2D" parent="."]
 frames = SubResource("SpriteFrames_qmmme")
-animation = &"Run"
+animation = &"Idle"
 playing = true
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
