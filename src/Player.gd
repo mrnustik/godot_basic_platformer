@@ -11,28 +11,35 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
-
-	# Handle Jump.
+	apply_gravity(delta)
+	
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * SPEED
+		apply_acceleration(direction)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		apply_friction()
+
+	print("Velocity.x= %d " % velocity.x)
 
 	if velocity.x != 0:
 		animationSprite.play("Run")
+		animationSprite.flip_h = velocity.x > 0
 	elif velocity.y != 0:
 		animationSprite.play("Jump")
 	else:
 		animationSprite.play("Idle")
-	
 
 	move_and_slide()
+
+func apply_acceleration(direction: float):
+	velocity.x = move_toward(velocity.x, direction * SPEED, 10)
+
+func apply_friction():
+	velocity.x = move_toward(velocity.x, 0, 10)
+
+func apply_gravity(delta):
+	if not is_on_floor():
+		velocity.y += gravity * delta
