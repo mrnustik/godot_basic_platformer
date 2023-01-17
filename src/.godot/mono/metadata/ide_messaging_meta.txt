@@ -1,2 +1,0 @@
-﻿62437
-C:/tools/Godot/Godot_v4.0-beta1_mono_win64.exe

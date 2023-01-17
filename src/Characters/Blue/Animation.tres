@@ -20,17 +20,29 @@ region = Rect2(72, 0, 24, 24)
 
 [resource]
 animations = [{
-"frames": [SubResource("AtlasTexture_7vbfg")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vbfg")
+}],
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
 }, {
-"frames": [SubResource("AtlasTexture_awyr2")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awyr2")
+}],
 "loop": true,
 "name": &"Jump",
 "speed": 5.0
 }, {
-"frames": [SubResource("AtlasTexture_d24hw"), SubResource("AtlasTexture_pq5aq")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d24hw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq5aq")
+}],
 "loop": true,
 "name": &"Run",
 "speed": 5.0
