@@ -1,41 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b1erldlanoujw"]
+[gd_scene load_steps=4 format=3 uid="uid://b1erldlanoujw"]
 
-[ext_resource type="Texture2D" uid="uid://dkmgv6rcck1q1" path="res://Assets/characters.png" id="1_6hi6p"]
 [ext_resource type="Script" path="res://Player.gd" id="1_wr43o"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7vbfg"]
-atlas = ExtResource("1_6hi6p")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_awyr2"]
-atlas = ExtResource("1_6hi6p")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d24hw"]
-atlas = ExtResource("1_6hi6p")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pq5aq"]
-atlas = ExtResource("1_6hi6p")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_qmmme"]
-animations = [{
-"frames": [SubResource("AtlasTexture_7vbfg")],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [SubResource("AtlasTexture_awyr2")],
-"loop": true,
-"name": &"Jump",
-"speed": 5.0
-}, {
-"frames": [SubResource("AtlasTexture_d24hw"), SubResource("AtlasTexture_pq5aq")],
-"loop": true,
-"name": &"Run",
-"speed": 5.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://cmairvvaymh7r" path="res://Characters/Blue/Animation.tres" id="2_uajek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgn8t"]
 size = Vector2(14, 20)
@@ -44,7 +10,7 @@ size = Vector2(14, 20)
 script = ExtResource("1_wr43o")
 
 [node name="AnimatedSprite2d" type="AnimatedSprite2D" parent="."]
-frames = SubResource("SpriteFrames_qmmme")
+frames = ExtResource("2_uajek")
 animation = &"Jump"
 playing = true
 
