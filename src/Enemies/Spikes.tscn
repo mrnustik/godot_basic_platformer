@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bvdb1ivemi3sx" path="res://Assets/tiles.png" id="2_tc5te"]
 
 [node name="Spikes" instance=ExtResource("1_e201l")]
-collision_layer = 0
 collision_mask = 2
 damage = 30
 

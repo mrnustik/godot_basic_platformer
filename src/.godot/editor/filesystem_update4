@@ -4,3 +4,4 @@ res://Hitbox.tscn
 res://Player.gd
 res://Spikes.tscn
 res://World.tscn
+res://Enemies/Spikes.tscn
