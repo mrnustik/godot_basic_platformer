@@ -10,3 +10,5 @@ res://SpikeHead.tscn
 res://TileMap.tscn
 res://Enemies/Spikes/Spikes.tscn
 res://Enemies/SpikeHead/SpikeHead.tscn
+res://PlayerHealth.gd
+res://Player.tscn
