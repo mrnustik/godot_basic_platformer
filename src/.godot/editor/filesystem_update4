@@ -1,2 +1,6 @@
-res://World.tscn
 res://Characters/Blue/Animation.tres
+res://Hitbox.gd
+res://Hitbox.tscn
+res://Player.gd
+res://Spikes.tscn
+res://World.tscn

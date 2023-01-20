@@ -1,11 +1,13 @@
 extends CharacterBody2D
-
+class_name Player
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -120.0
+const INITIAL_HEALTH = 100
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var health = INITIAL_HEALTH
 
 @onready var animationSprite: AnimatedSprite2D = get_node("AnimatedSprite2d")
 
@@ -43,3 +45,11 @@ func apply_friction():
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
+
+func damage(origin: Node2D, damage: int):
+	health -= damage;
+	if health < 0:
+		get_tree().reload_current_scene()
+	var knockBackDirection = origin.position.direction_to(self.position)
+	velocity = knockBackDirection * 200
+	
