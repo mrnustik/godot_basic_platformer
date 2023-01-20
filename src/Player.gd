@@ -24,8 +24,6 @@ func _physics_process(delta):
 	else:
 		apply_friction()
 
-	print("Velocity.x= %d " % velocity.x)
-
 	if velocity.x != 0:
 		animationSprite.play("Run")
 		animationSprite.flip_h = velocity.x > 0

@@ -5,3 +5,8 @@ res://Player.gd
 res://Spikes.tscn
 res://World.tscn
 res://Enemies/Spikes.tscn
+res://SpikeHead.gd
+res://SpikeHead.tscn
+res://TileMap.tscn
+res://Enemies/Spikes/Spikes.tscn
+res://Enemies/SpikeHead/SpikeHead.tscn

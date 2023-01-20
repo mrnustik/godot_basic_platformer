@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://dhckdv84fwx5m"]
 
 [ext_resource type="PackedScene" uid="uid://b1erldlanoujw" path="res://Player.tscn" id="1_21dn6"]
 [ext_resource type="PackedScene" uid="uid://ci2o45poki1dx" path="res://TileMap.tscn" id="2_xxayf"]
-[ext_resource type="PackedScene" uid="uid://b7rdm85wycc2k" path="res://Enemies/Spikes.tscn" id="3_f21lp"]
+[ext_resource type="PackedScene" uid="uid://b7rdm85wycc2k" path="res://Enemies/Spikes/Spikes.tscn" id="3_f21lp"]
+[ext_resource type="PackedScene" uid="uid://bnjed2rsytsx6" path="res://Enemies/SpikeHead/SpikeHead.tscn" id="4_ib5av"]
 
 [node name="World" type="Node2D"]
 
@@ -12,7 +13,10 @@ position = Vector2(156, 54)
 [node name="TileMap" parent="." instance=ExtResource("2_xxayf")]
 
 [node name="Spikes" parent="." instance=ExtResource("3_f21lp")]
-position = Vector2(190, 141)
+position = Vector2(191, 141)
 
-[node name="Spikes2" parent="." instance=ExtResource("3_f21lp")]
-position = Vector2(210, 141)
+[node name="SpikeHead" parent="." instance=ExtResource("4_ib5av")]
+position = Vector2(261, 132)
+
+[node name="SpikeHead2" parent="." instance=ExtResource("4_ib5av")]
+position = Vector2(285, 115)
