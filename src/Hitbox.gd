@@ -5,5 +5,4 @@ class_name Hitbox
 
 func _on_body_entered(body):
 	if body is Player:
-		print("Hitbox entered by player")
 		body.damage(self, damage)

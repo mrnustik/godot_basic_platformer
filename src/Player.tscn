@@ -18,3 +18,10 @@ playing = true
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_dgn8t")
+
+[node name="LadderDetector" type="RayCast2D" parent="."]
+position = Vector2(0, 1)
+target_position = Vector2(0, 1)
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false
