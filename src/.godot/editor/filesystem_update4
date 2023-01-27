@@ -9,3 +9,5 @@ res://Player.gd
 res://Ladder.tscn
 res://Ladder.gd
 res://Hitbox.gd
+res://Enemies/FlyBomb/FlyBomb.tscn
+res://Enemies/FlyBomb/FlyBomb.gd

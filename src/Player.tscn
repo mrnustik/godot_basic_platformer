@@ -12,7 +12,7 @@ script = ExtResource("1_wr43o")
 
 [node name="AnimatedSprite2d" type="AnimatedSprite2D" parent="."]
 frames = ExtResource("2_uajek")
-animation = &"Jump"
+animation = &"Climb"
 playing = true
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]

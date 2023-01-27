@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dhckdv84fwx5m"]
+[gd_scene load_steps=10 format=3 uid="uid://dhckdv84fwx5m"]
 
 [ext_resource type="PackedScene" uid="uid://b1erldlanoujw" path="res://Player.tscn" id="1_21dn6"]
 [ext_resource type="Script" path="res://PlayerHealth.gd" id="2_6atjg"]
@@ -6,10 +6,33 @@
 [ext_resource type="PackedScene" uid="uid://b7rdm85wycc2k" path="res://Enemies/Spikes/Spikes.tscn" id="3_f21lp"]
 [ext_resource type="PackedScene" uid="uid://bnjed2rsytsx6" path="res://Enemies/SpikeHead/SpikeHead.tscn" id="4_ib5av"]
 [ext_resource type="PackedScene" uid="uid://c5xbsar0tqlaf" path="res://Ladder.tscn" id="5_h650p"]
+[ext_resource type="PackedScene" uid="uid://biru1euioljdo" path="res://Enemies/FlyBomb/FlyBomb.tscn" id="7_ejyl5"]
+
+[sub_resource type="Curve2D" id="Curve2D_gj074"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 0, 0, 0, 0, 0, 55, -47, 0, 0, 0, 0, -1, -46, 0, 0, 0, 0, 0, -1)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_vkl40"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -44, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 54)
+}
+point_count = 3
 
 [node name="World" type="Node2D"]
 
 [node name="Level1" type="Node2D" parent="."]
+
+[node name="FlyBomb2" parent="Level1" instance=ExtResource("7_ejyl5")]
+position = Vector2(56, 104)
+curve = SubResource("Curve2D_gj074")
+animationType = 0
+
+[node name="FlyBomb" parent="Level1" instance=ExtResource("7_ejyl5")]
+position = Vector2(343, 88)
+curve = SubResource("Curve2D_vkl40")
+animationType = 1
 
 [node name="Player" parent="Level1" instance=ExtResource("1_21dn6")]
 position = Vector2(156, 54)

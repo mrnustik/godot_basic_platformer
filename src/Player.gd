@@ -30,6 +30,7 @@ func climb_state(delta, input: Vector2):
 		state = Move
 
 	velocity = input * 50
+	animationSprite.play("Climb")
 	move_and_slide()
 
 func move_state(delta, input: Vector2):
