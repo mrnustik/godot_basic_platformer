@@ -27,12 +27,11 @@ point_count = 3
 [node name="FlyBomb2" parent="Level1" instance=ExtResource("7_ejyl5")]
 position = Vector2(56, 104)
 curve = SubResource("Curve2D_gj074")
-animationType = 0
+animationType = 1
 
 [node name="FlyBomb" parent="Level1" instance=ExtResource("7_ejyl5")]
 position = Vector2(343, 88)
 curve = SubResource("Curve2D_vkl40")
-animationType = 1
 
 [node name="Player" parent="Level1" instance=ExtResource("1_21dn6")]
 position = Vector2(156, 54)

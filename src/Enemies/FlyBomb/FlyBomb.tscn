@@ -51,6 +51,7 @@ _data = {
 [node name="FlyBomb" type="Path2D"]
 curve = SubResource("Curve2D_wv5ep")
 script = ExtResource("1_71e8k")
+animationType = 0
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 rotates = false
