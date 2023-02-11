@@ -11,3 +11,6 @@ res://Enemies/FlyBomb/FlyBomb.gd
 res://Player.gd
 res://World.gd
 res://Events.gd
+res://Checkpoint.tscn
+res://Checkpoint.gd
+res://PlayerHealth.gd

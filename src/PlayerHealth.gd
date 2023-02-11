@@ -1,11 +1,15 @@
 extends Label
+class_name PlayerHealth
 
 var currentHealth = 100
 
-@onready var player: Player = get_node("../../Level1/Player")
+var player: Player
 
 func _process(delta):
+	if player == null: return
 	if player.health != currentHealth:
 		currentHealth = player.health
 		text = "Health: %d" % currentHealth
-	pass
+
+func set_player(player: Player):
+	self.player = player

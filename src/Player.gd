@@ -35,7 +35,7 @@ func climb_state(delta, input: Vector2):
 	move_and_slide()
 
 func move_state(delta, input: Vector2):
-	if is_on_ladder():
+	if is_on_ladder() and Input.is_action_just_pressed("ui_up"):
 		state = Climb
 	
 	apply_gravity(delta)
@@ -79,7 +79,9 @@ func damage(origin: Node2D, damage: int):
 	velocity = knockBackDirection * 200
 
 func die():
-	get_tree().reload_current_scene()
+	queue_free()
+	Events.player_died.emit()
+	
 
 func connect_camera(camera: Camera2D):
 	var cameraPath = camera.get_path()
