@@ -11,9 +11,8 @@ collision_layer = 2
 script = ExtResource("1_wr43o")
 
 [node name="AnimatedSprite2d" type="AnimatedSprite2D" parent="."]
-frames = ExtResource("2_uajek")
+sprite_frames = ExtResource("2_uajek")
 animation = &"Climb"
-playing = true
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -25,3 +24,5 @@ target_position = Vector2(0, 1)
 hit_from_inside = true
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]

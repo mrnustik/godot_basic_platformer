@@ -5,9 +5,9 @@ res://Hitbox.tscn
 res://TileMap.tscn
 res://Enemies/SpikeHead/SpikeHead.tscn
 res://Player.tscn
-res://Player.gd
 res://Ladder.tscn
-res://Ladder.gd
-res://Hitbox.gd
 res://Enemies/FlyBomb/FlyBomb.tscn
 res://Enemies/FlyBomb/FlyBomb.gd
+res://Player.gd
+res://World.gd
+res://Events.gd

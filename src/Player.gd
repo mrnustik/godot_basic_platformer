@@ -14,6 +14,7 @@ var state = Move
 
 @onready var animationSprite: AnimatedSprite2D = get_node("AnimatedSprite2d")
 @onready var ladderDetector: RayCast2D = get_node("LadderDetector")
+@onready var remoteTransform: RemoteTransform2D = get_node("RemoteTransform2D")
 
 
 func _physics_process(delta):
@@ -73,7 +74,13 @@ func is_on_ladder():
 func damage(origin: Node2D, damage: int):
 	health -= damage;
 	if health < 0:
-		get_tree().reload_current_scene()
+		die()
 	var knockBackDirection = origin.position.direction_to(self.position)
 	velocity = knockBackDirection * 200
-	
+
+func die():
+	get_tree().reload_current_scene()
+
+func connect_camera(camera: Camera2D):
+	var cameraPath = camera.get_path()
+	remoteTransform.remote_path = cameraPath
